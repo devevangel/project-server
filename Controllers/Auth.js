@@ -19,8 +19,8 @@ exports.signUp = async (req, res) => {
 
   const token = signToken(newUser._id);
 
-  const { name, email, photo, _id } = newUser;
-  const user = { name, email, photo, _id };
+  const { email, photo, _id, fullname } = newUser;
+  const user = { email, photo, _id, fullname };
 
   res.status(201).json({
     status: "success",
